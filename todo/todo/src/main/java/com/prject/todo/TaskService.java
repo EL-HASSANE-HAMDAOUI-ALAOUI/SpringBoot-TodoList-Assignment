@@ -1,4 +1,4 @@
-package com.project.todo;
+package com.prject.todo;
 
 import org.springframework.stereotype.Service;
 
