@@ -7,6 +7,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/tasks")
 public class TaskController {
+
     private final TaskService service;
 
     public TaskController(TaskService service) {
@@ -21,6 +22,11 @@ public class TaskController {
     @PostMapping
     public Task createTask(@RequestBody Task task) {
         return service.createTask(task);
+    }
+
+    @PutMapping("/{id}")
+    public Task updateTask(@PathVariable Long id, @RequestBody Task task) {
+        return service.updateTask(id, task);
     }
 
     @DeleteMapping("/{id}")

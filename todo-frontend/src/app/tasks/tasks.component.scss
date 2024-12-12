@@ -1,0 +1,144 @@
+.todo-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.add-task {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+
+  .date-inputs {
+    display: flex;
+    gap: 10px;
+  }
+
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+
+    &:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  }
+
+  .button-add, .button-save {
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+      background-color: #007bff; 
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    &:active {
+      background-color: #007bff; 
+      transform: translateY(1px);
+    }
+  }
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .task-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .task-content {
+      h3 {
+        margin: 0;
+        font-size: 1.5em;
+
+        &.completed {
+          text-decoration: line-through;
+          color: #888;
+        }
+      }
+
+      .task-details {
+        margin: 10px 0;
+        font-size: 1em;
+        color: #555;
+      }
+
+      .task-dates {
+        font-size: 0.9em;
+        color: #777;
+
+        span {
+          display: block;
+        }
+      }
+
+      .task-status {
+        font-weight: bold;
+        color: #333;
+      }
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 12px;
+        font-size: 0.9em;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background-color: #0056b3;
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          background-color: #004085;
+          transform: translateY(1px);
+        }
+
+        i {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
